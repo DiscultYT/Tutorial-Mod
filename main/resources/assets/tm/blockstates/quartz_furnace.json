@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "tm:quartz_furnace" },
+        "facing=south": { "model": "tm:quartz_furnace", "y": 180 },
+        "facing=west":  { "model": "tm:quartz_furnace", "y": 270 },
+        "facing=east":  { "model": "tm:quartz_furnace", "y": 90 }
+    }
+}
