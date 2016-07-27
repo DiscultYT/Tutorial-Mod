@@ -4,6 +4,7 @@ package jordan.tutorial.proxy;
 import jordan.tutorial.init.TutorialArmor;
 import jordan.tutorial.init.TutorialBlocks;
 import jordan.tutorial.init.TutorialTools;
+import jordan.tutorial.init.worldgen.TutorialWorldGen;
 import jordan.tutorial.main.Reference;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,6 +31,8 @@ public class ClientProxy extends CommonProxy
 		TutorialArmor.registerRenders();
 		TutorialTools.registerRenders();
 		TutorialBlocks.registerRenders();
+		
+		GameRegistry.registerWorldGenerator(new TutorialWorldGen(), 0);
 		
 		
 	}
