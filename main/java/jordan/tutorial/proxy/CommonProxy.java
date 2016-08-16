@@ -2,6 +2,8 @@ package jordan.tutorial.proxy;
 
 import jordan.tutorial.init.TutorialArmor;
 import jordan.tutorial.init.TutorialBlocks;
+import jordan.tutorial.init.TutorialEvents;
+import jordan.tutorial.init.TutorialSoundEvents;
 import jordan.tutorial.init.TutorialTools;
 import jordan.tutorial.init.tileentity.blocks.furnace.TEQuartzFurnace;
 import jordan.tutorial.main.Tutorial;
@@ -22,7 +24,11 @@ public class CommonProxy
 		TutorialBlocks.init();
 		TutorialBlocks.register();
 		
+		TutorialSoundEvents.registerSounds();
+		
 		GameRegistry.registerTileEntity(TEQuartzFurnace.class, "QF");
+		
+		MinecraftForge.EVENT_BUS.register(new TutorialEvents());
 	}
 	
 	public void init(FMLInitializationEvent event)

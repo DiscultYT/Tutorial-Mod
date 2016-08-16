@@ -25,12 +25,14 @@ public class TutorialItemPaxel extends ItemTool
 	private static final float[] ATTACK_DAMAGES = new float[] {6.0F, 8.0F, 8.0F, 8.0F, 6.0F};
 	private static final float[] ATTACK_SPEEDS = new float[] { -3.2F, -3.2F, -3.1F, -3.0F, -3.0F};
 	
-	public TutorialItemPaxel(Item.ToolMaterial material)
+	public TutorialItemPaxel(Item.ToolMaterial material, String name)
 	{
 		super(material, EFFECTIVE_ON);
 		this.damageVsEntity = ATTACK_DAMAGES[material.ordinal()];	
 		this.attackSpeed = ATTACK_SPEEDS[material.ordinal()];
 		this.setCreativeTab(CreativeTabs.TOOLS);
+		this.setUnlocalizedName(name);
+		this.setRegistryName(name);
 	}
 	
 	public TutorialItemPaxel(Item.ToolMaterial material, float damage, float speed)

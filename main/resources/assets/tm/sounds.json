@@ -1,0 +1,10 @@
+{
+"boar.ambient": {
+    "category": "master",
+    "sounds": [
+    {
+        "name": "tm:/boar/boar_ambient","stream":false
+    }
+    ]
+}
+}
